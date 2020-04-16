@@ -41,24 +41,31 @@ class AddTaskScreen extends StatelessWidget {
                 Provider.of<TaskData>(context).addTask(newTaskTitle);
                 Navigator.pop(context);
               },
-              child: Container(
-                margin: EdgeInsets.only(top: 20),
-                padding: EdgeInsets.symmetric(vertical:12),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  color: Colors.white,
-                ),
-                child: Center(
-                  child: Text(
-                    'Add'.toUpperCase(),
-                    style: TextStyle(
-                      color: Colors.deepPurple[900],
-                    ),
-                  ),
-                ),
-              ),
+              child: AddTasksButton(),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class AddTasksButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: 20),
+      padding: EdgeInsets.symmetric(vertical:12),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(50),
+        color: Colors.white,
+      ),
+      child: Center(
+        child: Text(
+          'Add'.toUpperCase(),
+          style: TextStyle(
+            color: Colors.deepPurple[900],
+          ),
         ),
       ),
     );
