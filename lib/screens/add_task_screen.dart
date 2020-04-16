@@ -30,7 +30,7 @@ class AddTaskScreen extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            
+            SizedBox(height: 20,),
             Container(
               decoration: BoxDecoration(
                 color: Colors.grey[300],
