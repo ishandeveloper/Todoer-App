@@ -6,7 +6,7 @@ class AboutPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.deepPurple[900],
       appBar: AppBar(
-        title: Text("About Quizzy", style: TextStyle(color: Colors.white)),
+        title: Text("About Todoer", style: TextStyle(fontFamily: 'Poppins',color: Colors.white)),
         backgroundColor: Colors.deepPurple[900],
         iconTheme: IconThemeData(color: Colors.white),
         elevation: 0,
