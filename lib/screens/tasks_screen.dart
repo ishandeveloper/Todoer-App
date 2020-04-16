@@ -10,20 +10,40 @@ class TasksScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.deepPurple[900],
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.deepPurple[900],
-        child: Icon(Icons.add),
+          backgroundColor: Colors.deepPurple[900],
+          child: Icon(Icons.add),
           onPressed: () {
             showModalBottomSheet(
                 context: context,
                 isScrollControlled: true,
                 builder: (context) => SingleChildScrollView(
-                    child:Container(
-                      padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+                        child: Container(
+                      padding: EdgeInsets.only(
+                          bottom: MediaQuery.of(context).viewInsets.bottom),
                       child: AddTaskScreen(),
-                    )
-                )
-            );
-          }
+                    )));
+          }),
+      drawer: Drawer(
+        child: SafeArea(
+                  child: Column(
+            children: <Widget>[
+              ListTile(
+                leading: Icon(Icons.speaker_notes,size: 32,color: Colors.deepPurple[900],),
+                title: Text("Home"),
+                subtitle: Text("Track your tasks Todo."),
+                onTap: (){},
+              ),
+              ListTile(
+                leading: Icon(Icons.info,size: 32,color: Colors.deepPurple[900],),
+                title: Text("About"),
+                subtitle: Text("About the app and the creator."),
+                onTap: (){
+                  
+                },
+              ),
+            ],
+          ),
+        ),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,7 +67,7 @@ class TasksScreen extends StatelessWidget {
                   height: 10.0,
                 ),
                 Text(
-                  'Todoey',
+                  'Todoer',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 50.0,
