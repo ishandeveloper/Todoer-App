@@ -23,28 +23,7 @@ class TasksScreen extends StatelessWidget {
                       child: AddTaskScreen(),
                     )));
           }),
-      drawer: Drawer(
-        child: SafeArea(
-                  child: Column(
-            children: <Widget>[
-              ListTile(
-                leading: Icon(Icons.speaker_notes,size: 32,color: Colors.deepPurple[900],),
-                title: Text("Home"),
-                subtitle: Text("Track your tasks Todo."),
-                onTap: (){},
-              ),
-              ListTile(
-                leading: Icon(Icons.info,size: 32,color: Colors.deepPurple[900],),
-                title: Text("About"),
-                subtitle: Text("About the app and the creator."),
-                onTap: (){
-                  
-                },
-              ),
-            ],
-          ),
-        ),
-      ),
+      
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -61,7 +40,7 @@ class TasksScreen extends StatelessWidget {
                     color: Colors.deepPurple[900],
                   ),
                   backgroundColor: Colors.white,
-                  radius: 30.0,
+                  radius: 28.0,
                 ),
                 SizedBox(
                   height: 10.0,
