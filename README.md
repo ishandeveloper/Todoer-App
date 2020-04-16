@@ -2,7 +2,7 @@
 
 # Todoer App
 
-This is a flutter based A todolist app to keep track of all your tasks with enriched user experience.
+This is a flutter based todolist app to keep track of all your tasks with enriched user experience.
 
 One of the first simple apps I created while on my journey to learn flutter.
 
