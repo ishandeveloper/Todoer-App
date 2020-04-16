@@ -12,9 +12,9 @@ class AddTaskScreen extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(20.0),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Colors.deepPurple[900],
           borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(20.0),
+            topLeft: Radius.circular(20.0),
             topRight: Radius.circular(20.0),
           ),
         ),
@@ -26,7 +26,7 @@ class AddTaskScreen extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 30.0,
-                color: Colors.deepPurple[900],
+                color: Colors.white,
               ),
             ),
             TextField(
@@ -36,18 +36,27 @@ class AddTaskScreen extends StatelessWidget {
                 newTaskTitle = newText;
               },
             ),
-            FlatButton(
-              child: Text(
-                'Add'.toUpperCase(),
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-              color: Colors.deepPurple[900],
-              onPressed: () {
+            GestureDetector(
+              onTap: () {
                 Provider.of<TaskData>(context).addTask(newTaskTitle);
                 Navigator.pop(context);
               },
+              child: Container(
+                margin: EdgeInsets.only(top: 20),
+                padding: EdgeInsets.symmetric(vertical:12),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: Colors.white,
+                ),
+                child: Center(
+                  child: Text(
+                    'Add'.toUpperCase(),
+                    style: TextStyle(
+                      color: Colors.deepPurple[900],
+                    ),
+                  ),
+                ),
+              ),
             ),
           ],
         ),
