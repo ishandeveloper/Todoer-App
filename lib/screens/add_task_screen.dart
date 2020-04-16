@@ -30,12 +30,27 @@ class AddTaskScreen extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            TextField(
-              autofocus: true,
-              textAlign: TextAlign.center,
-              onChanged: (newText) {
-                newTaskTitle = newText;
-              },
+            
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.grey[300],
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: "What would you like To-do?",
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+                style: TextStyle(color: Colors.deepPurple),
+                autofocus: true,
+                cursorColor: Colors.deepPurple,
+                textAlign: TextAlign.center,
+                onChanged: (newText) {
+                  newTaskTitle = newText;
+                },
+              ),
             ),
             GestureDetector(
               onTap: () {
@@ -50,4 +65,3 @@ class AddTaskScreen extends StatelessWidget {
     );
   }
 }
-
