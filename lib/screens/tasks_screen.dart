@@ -4,6 +4,8 @@ import 'package:todoer/screens/add_task_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:todoer/models/task_data.dart';
 
+import 'about.dart';
+
 class TasksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -14,16 +16,17 @@ class TasksScreen extends StatelessWidget {
           child: Icon(Icons.add),
           onPressed: () {
             showModalBottomSheet(
-                context: context,
-                isScrollControlled: true,
-                builder: (context) => SingleChildScrollView(
-                        child: Container(
-                      padding: EdgeInsets.only(
-                          bottom: MediaQuery.of(context).viewInsets.bottom),
-                      child: AddTaskScreen(),
-                    )));
+              context: context,
+              isScrollControlled: true,
+              builder: (context) => SingleChildScrollView(
+                child: Container(
+                  padding: EdgeInsets.only(
+                      bottom: MediaQuery.of(context).viewInsets.bottom),
+                  child: AddTaskScreen(),
+                ),
+              ),
+            );
           }),
-      
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -33,14 +36,24 @@ class TasksScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                CircleAvatar(
-                  child: Icon(
-                    Icons.list,
-                    size: 30.0,
-                    color: Colors.deepPurple[900],
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AboutPage(),
+                      ),
+                    );
+                  },
+                  child: CircleAvatar(
+                    child: Icon(
+                      Icons.list,
+                      size: 30.0,
+                      color: Colors.deepPurple[900],
+                    ),
+                    backgroundColor: Colors.white,
+                    radius: 28.0,
                   ),
-                  backgroundColor: Colors.white,
-                  radius: 28.0,
                 ),
                 SizedBox(
                   height: 10.0,
