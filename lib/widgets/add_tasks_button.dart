@@ -14,6 +14,9 @@ class AddTasksButton extends StatelessWidget {
         child: Text(
           'Add'.toUpperCase(),
           style: TextStyle(
+            fontFamily: 'Poppins',
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
             color: Colors.deepPurple[900],
           ),
         ),

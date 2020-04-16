@@ -26,11 +26,14 @@ class AddTaskScreen extends StatelessWidget {
               'Add Task'.toUpperCase(),
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 30.0,
-                color: Colors.white,
-              ),
+                  fontSize: 30.0,
+                  color: Colors.white,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             Container(
               decoration: BoxDecoration(
                 color: Colors.grey[300],
@@ -43,7 +46,7 @@ class AddTaskScreen extends StatelessWidget {
                     borderSide: BorderSide.none,
                   ),
                 ),
-                style: TextStyle(color: Colors.deepPurple),
+                style: TextStyle(fontFamily: 'Poppins',color: Colors.deepPurple),
                 autofocus: true,
                 cursorColor: Colors.deepPurple,
                 textAlign: TextAlign.center,
